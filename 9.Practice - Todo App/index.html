@@ -5,23 +5,27 @@
 </head>
 <body>
 
-    <h1>Todo App</h1>
+    <div id="container">
 
-    <!-- Input Section -->
-    <div>
-        <input type="text" id="taskInput" placeholder="Enter your task">
-        <button id="addBtn">Add Task</button>
+        <h1>Todo App</h1>
+
+        <!-- Input Section -->
+        <div id="inputSection">
+            <input type="text" id="taskInput" placeholder="Enter your task">
+            <button id="addBtn">Add Task</button>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div id="filters">
+            <button id="allBtn">All</button>
+            <button id="completedBtn">Completed</button>
+            <button id="pendingBtn">Pending</button>
+        </div>
+
+        <!-- Task List -->
+        <ul id="taskList"></ul>
+
     </div>
-
-    <!-- 🔥 Filter Buttons -->
-    <div>
-        <button id="allBtn">All</button>
-        <button id="completedBtn">Completed</button>
-        <button id="pendingBtn">Pending</button>
-    </div>
-
-    <!-- Task List -->
-    <ul id="taskList"></ul>
 
     <script src="script.js"></script>
 </body>

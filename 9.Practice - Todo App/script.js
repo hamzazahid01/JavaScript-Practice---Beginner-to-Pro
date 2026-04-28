@@ -8,12 +8,13 @@ let pendingBtn = document.querySelector("#pendingBtn");
 
 function saveTasks(){
     let tasks = [];
-    let items = document.querySelectorAll("#taskList li span");
-    items.forEach(
-        function(item){
-            tasks.push(item.innerText);
-        }
-    );
+    let items = document.querySelectorAll("#taskList li");
+    items.forEach(li=>{
+        tasks.push({
+            text: li.querySelector("span").innerText,
+            completed: li.classList.contains("completed")
+        })
+    });
     localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
@@ -47,7 +48,7 @@ addBtn.addEventListener("click", function(){
         span.addEventListener("dblclick",function(){
             let newTask = prompt("Edit Task: ",span.innerText);
 
-            if(newTask!==null && newTask==""){
+            if(newTask!==null && newTask!==""){
                 span.innerText=newTask;
                 saveTasks();
             }
@@ -90,7 +91,7 @@ window.addEventListener("load",function(){
             span.addEventListener("dblclick",function(){
                 let newTask = prompt("Edit Task: ",span.innerText);
 
-                if(newTask!==null && newTask==""){
+                if(newTask!==null && newTask!==""){
                     span.innerText=newTask;
                     saveTasks();
                 }
