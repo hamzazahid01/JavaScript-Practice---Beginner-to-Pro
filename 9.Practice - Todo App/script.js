@@ -40,6 +40,15 @@ addBtn.addEventListener("click", function(){
             li.classList.toggle("completed")
         })
 
+        span.addEventListener("dblclick",function(){
+            let newTask = prompt("Edit Task: ",span.innerText);
+
+            if(newTask!==null || newTask==""){
+                span.innerText=newTask;
+                saveTasks();
+            }
+        })
+
         li.appendChild(span);
         li.appendChild(delBtn);
 
@@ -73,6 +82,15 @@ window.addEventListener("load",function(){
                 saveTasks();
             })
 
+            span.addEventListener("dblclick",function(){
+                let newTask = prompt("Edit Task: ",span.innerText);
+
+                if(newTask!==null || newTask==""){
+                    span.innerText=newTask;
+                    saveTasks();
+                }
+            })
+
             li.appendChild(span);
             li.appendChild(delBtn);
 
@@ -82,5 +100,13 @@ window.addEventListener("load",function(){
     }
 })
 
+span.addEventListener("dblclick",function(){
+    let newTask = prompt("Edit Task: ",span.innerText);
+
+    if(newTask!==null || newTask==""){
+        span.innerText=newTask;
+        saveTasks();
+    }
+})
 
 
