@@ -1,4 +1,122 @@
+/* 🔹 Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 🔹 Body */
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 🔹 Main Container */
+#container {
+    background: white;
+    padding: 25px;
+    width: 380px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* 🔹 Heading */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* 🔹 Input Section */
+#inputSection {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+}
+
+#taskInput:focus {
+    border-color: #667eea;
+}
+
+/* 🔹 Buttons */
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #667eea;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #5a67d8;
+}
+
+/* 🔹 Filters */
+#filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+#filters button {
+    flex: 1;
+    margin: 0 3px;
+    background: #eee;
+    color: #333;
+}
+
+#filters button:hover {
+    background: #ddd;
+}
+
+/* 🔹 Task List */
+#taskList {
+    list-style: none;
+}
+
+/* 🔹 Task Item */
+#taskList li {
+    background: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    transition: 0.2s;
+}
+
+#taskList li:hover {
+    transform: scale(1.02);
+}
+
+/* 🔹 Completed Task */
 .completed {
     text-decoration: line-through;
     color: gray;
+}
+
+/* 🔹 Delete Button */
+#taskList button {
+    background: #e53e3e;
+}
+
+#taskList button:hover {
+    background: #c53030;
 }

@@ -111,7 +111,7 @@ window.addEventListener("load",function(){
         allBtn.addEventListener("click", function(){
             let display=document.querySelectorAll("#taskList li");
             display.forEach(li=>{
-                li.style.display="block";
+                li.style.display="flex";
             })
         })
 
@@ -119,7 +119,7 @@ window.addEventListener("load",function(){
             let display = document.querySelectorAll("#taskList li");
             display.forEach(li=>{
                 if(li.classList.contains("completed")){
-                    li.style.display="block";
+                    li.style.display="flex";
                 }else{
                    li.style.display="none"; 
                 }
@@ -130,7 +130,7 @@ window.addEventListener("load",function(){
             let display = document.querySelectorAll("#taskList li");
             display.forEach(li=>{
                 if(!li.classList.contains("completed")){
-                    li.style.display="block";
+                    li.style.display="flex";
                 }else{
                     li.style.display="none";
                 }
