@@ -74,7 +74,7 @@ window.addEventListener("load",function(){
             let li = document.createElement("li");
 
             let span = document.createElement("span");
-            span.innerText=task;
+            span.innerText=task.text;
 
             let delBtn=document.createElement("button");
             delBtn.innerText="Delete";
