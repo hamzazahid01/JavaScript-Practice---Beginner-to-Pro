@@ -31,6 +31,7 @@ function checkWin(){
     })
 }
 
+
 let player = true;
 
 cells.forEach((cell)=>{
