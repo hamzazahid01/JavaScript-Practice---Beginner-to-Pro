@@ -2,9 +2,9 @@
 let resetBtn = document.querySelector("#resetBtn");
 let status = document.querySelector("#status");
 let cells = document.querySelectorAll(".cell");
-let board = document.querySelector("#board");
+let board = document.querySelector("#board-container");
 
-let winnerFound = document.createAttribute("#winnerFound");
+let winnerFound = document.createElement("h2");
 
 const winPattern = [
     [0,1,2],
@@ -31,6 +31,7 @@ function checkWin(){
             console.log("Winner Found!");
             winnerFound.innerText=pos1 + " is Winner!!";
             alreadyWin = true;
+            board.insertBefore(winnerFound,resetBtn);
             return true;
         }
 
