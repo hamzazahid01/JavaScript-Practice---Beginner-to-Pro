@@ -76,3 +76,10 @@ cells.forEach((cell)=>{
     })
 
 
+resetBtn.addEventListener("click", function(){
+    cells.forEach((cell)=>{
+        cell.innerText="";
+        alreadyWin=false;
+        cell.classList.remove("win");
+    })
+})
