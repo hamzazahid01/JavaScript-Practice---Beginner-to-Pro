@@ -15,5 +15,4 @@ async function wait(){
     let b = await fetchData(2);
     console.log(b);
 }
-
 wait();
