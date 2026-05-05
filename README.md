@@ -27,8 +27,24 @@ Topics Covered:
     - Highlight winning cells
     - Reset functionality  
 
+  - OOP Concepts:-
+    - Objects  
+    - Classes  
+    - Inheritance  
+    - Constructor  
+    - Methods  
+    - Getters / Setters  
+    - Static Methods  
+    - Private Properties 
+
+  - Learned and practiced **Callbacks
+    - Understood Promises
+    - Implemented Async / Await
+    - Converted callback logic into cleaner async code
+    - Fixed promise syntax and async flow issues 
+
  Goal:
   To master JavaScript fundamentals and build real-world frontend projects.
 
-Author
+Author:
 Hamza Zahid
