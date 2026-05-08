@@ -1,23 +1,25 @@
-let url = "https://official-joke-api.appspot.com/randm_joke";
+let url = "https://official-joke-api.appspot.com/random_joke";
 
-// fetch(url)
-//     .then((response)=>{
-//         return response.json();
-//     })
-//     .then((data)=>{
-//         console.log(data);
-//     });
+let setupLine = document.querySelector("#setup");
 
-async function getJoke(){
-    try{
-        const response = await fetch(url);
-        let data = await response.json();
-        console.log(data);
-        console.log(data.setup);
-        console.log(data.punchline);
-    } catch(error){
-        console.log("Error Alert");
-        console.log(error);
+let sLine;
+let pLine;
+
+window.addEventListener("load",()=>{
+    async function getJoke(){
+        try{
+            const response = await fetch(url);
+            let data = await response.json();
+            console.log(data);
+            sLine=data.setup;
+            pline=data.punchLine;
+
+            setupLine.innerText = sLine;
+
+        } catch(error){
+            console.log("Error Alert");
+            console.log(error);
+        }
     }
-}
-getJoke();
+    getJoke();
+});
